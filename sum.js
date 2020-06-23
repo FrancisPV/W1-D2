@@ -4,16 +4,12 @@
 // We need at least 2 arguments.
 const argumentList = process.argv;
 const elements = argumentList.slice(2);
-
 let total = 0;
-// goes through each
+if(argumentList.length < 2) {
+  console.log('please provide at least two arguments!')
+} else {
 for(let i = 0; i < argumentList.length; i++) {
   total += Number(argumentList[i]);
 }
-// If any argument is not a whole number, skip it
-// Do support negative numbers though.
-// If any argument is not a number, output an error message.
-
-// add each number
-
-// print the sum
+}
+console.log(total)
